@@ -1,17 +1,18 @@
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
+const pdf = require('pdf-parse');
 
 http.createServer(function (req, res) {
   if (req.url == '/fileupload') {
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
       var oldpath = files.filetoupload.path;
-      var newpath = 'C:/Users/PC/Desktop/Yogaya/' + files.filetoupload.name;
+      var newpath = 'C:/Users/PC/Desktop/Yogaya/Practise Projects/multer-testing/' + files.filetoupload.name;
       fs.rename(oldpath, newpath, function (err) {
         if (err) throw err;
         res.write('File uploaded and moved!');
-        res.end();
+        res.end();        
       });
  });
   } else {
@@ -23,3 +24,4 @@ http.createServer(function (req, res) {
     return res.end();
   }
 }).listen(8080);
+
