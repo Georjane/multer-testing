@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>WordRadar</title>
+</head>
+  <body>
+    <nav>
+      <a href="#"><span><i class="fab fa-apple"></i></span></a>
+      <a href="#"><span>Store</span></a>
+      <a href="#"><span>Mac</span></a>
+      <a href="#"><span>iPod</span></a>
+      <a href="#"><span>iPhone</span></a>
+      <a href="#"><span>iPad</span></a>
+      <a href="#"><span>iTunes</span></a>
+      <a href="#"><span>Support</span></a>
+     </nav>
+    <div class="jumbotron">
+      <h1>Word Radar</h1>
+      <p>Discover which books you will find more comprehensible...</p>
+
+      <form action="/fileupload" enctype="multipart/form-data" method="POST">      
+        <span>Upload a book:</span> <br>
+        <input type="file" name="mybook" required/> <br> 
+        <input type="submit" value="Upload">  
+      </form>
+  
+  
+    </div>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(#0f26488c,#0f2648), url('image1.jpg');
+  background-position: 55% 100%;
+  height: 100vh;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover
+}
+
+nav {
+  background: linear-gradient(to top, rgb(110, 110, 110), rgb(87, 86, 86) 50%, rgb(110, 110, 110) 50%);
+  display: flex;
+  border-radius: 5px;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 38px;
+  position: relative;
+  top: 85px;
+  margin: auto;
+}
+
+nav a {
+  display: flex;
+  height: inherit;
+  width: inherit;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  border-right: solid 1px rgb(87, 86, 86);
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.jumbotron {
+  position: relative;
+  top: 100px;
+  height: 50vh;
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(54, 66, 136, 0);
+  color: white;
+}
+    </style>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
